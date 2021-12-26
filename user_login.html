@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atlas | Login here to begin</title>
+    <!-- FONTAWESOME CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <!-- LOADING -->
+    <div class="pre-loader">
+        <div class="loader">ATLAS</div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navigation">
+        <div class="container">
+            <a href="index.html" class="logo"><span>ATl</span>as</a>
+
+            <ul id="links">
+                <li><a href="#" id="closebtn" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true"></i>
+                    </a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="payment.html">Payment</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="user_login.html" class="login">Login</a></li>
+                <li><a href="signup.html" class="signup">Signup</a></li>
+            </ul>
+        </div>
+        <img src="img/menu.svg" alt="menu icon" id="menu" onclick="openNav()" />
+    </nav>
+    <!-- NAVIGATION ENDS HERE -->
+
+    <!-- PAGE NAME -->
+    <div class="page-title">
+        <h2 class="content">Login here</h2>
+    </div>
+    <!-- PAGE NAME ENDS HERE -->
+
+
+    <div class="user">
+        <div class="form">
+            <form action="/" id="form" method="">
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input type="text" required>
+                    <span>Email</span>
+                </div>
+                <div class="input-box">
+                    <input type="password" required id="pass">
+                    <span>Password</span>
+                </div>
+                <button type="submit">Sign up</button>
+
+                <div class="bottom-text">
+                    <p>Don't hahve account? <a href="user_reg.html">Sign up</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- JQUERY JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- CUSTOM JS -->
+    <script src="js/script.js"></script>
+    <script>
+        var form = document.getElementById("form");
+
+        // form.addEventListner("submit", confirmPasword);
+
+        form.onsubmit = function (e) {
+            e.preventDefault();
+            var pass = document.getElementById("pass").value;
+            var cpass = document.getElementById("cpass").value;
+
+            if (pass !== cpass) {
+                document.getElementById("errormsg").style.visibility = 'visible';
+                document.querySelector("#icon").style.visibility = "visible";
+                document.getElementById('cpass').style.border = "2px solid #f0215f";
+            } else {
+                document.getElementById("errormsg").style.visibility = 'hidden';
+                document.querySelector("#icon").style.visibility = "hidden";
+                document.getElementById('cpass').style.border = "2px solid #838383";
+                document.getElementById('form').submit();
+            }
+            
+        }
+        //PAGE PRELOADER
+        $(document).ready(function () {
+            //Preloader
+            preloaderFadeOutTime = 500;
+
+            function hidePreloader() {
+                var preloader = $(".pre-loader");
+                preloader.fadeOut(preloaderFadeOutTime);
+            }
+            setInterval(hidePreloader, 1000);
+        });
+    </script>
+    </div>
+</body>
+
+</html>

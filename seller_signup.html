@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atlas | Business owner Registration</title>
+    <!-- FONTAWESOME CSS -->
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- LOADING -->
+    <div class="pre-loader">
+      <div class="loader">ATLAS</div>
+    </div>
+
+        <!-- NAVIGATION -->
+        <nav class="navigation">
+          <div class="container">
+            <a href="index.html" class="logo"><span>ATl</span>as</a>
+    
+            <ul id="links">
+              <li><a href="#" id="closebtn" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true"></i>
+              </a></li>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="payment.html">Payment</a></li>
+              <li><a href="pricing.html">Pricing</a></li>
+              <li><a href="user_login.html" class="login">Login</a></li>
+              <li><a href="signup.html" class="signup">Signup</a></li>
+            </ul>
+          </div>
+          <img src="img/menu.svg" alt="menu icon" id="menu" onclick="openNav()" />
+        </nav>
+        <!-- NAVIGATION ENDS HERE -->
+
+
+     <!-- PAGE NAME -->
+     <div class="page-title">
+        <h2 class="content">Business owner regristration</h2>
+        <p>Please fill in your info details</p>
+    </div>
+    <!-- REGRISTRATION STARTS HERE -->
+    <!-- A MULTIPLE STEP FORM -->
+    <div class="reg-form">
+      <form action="" id="regform" method="POST">
+        <div class="tab">
+          <h2>What's your business name?</h2>
+          <div class="input-box">
+            <input type="text" required />
+            <label>Business Name</label>
+          </div>
+        </div>
+        <div class="tab">
+          <h2>Choose the category your business fits into</h2>
+          <p>This helps customers know your business industry</p>
+          <div class="input-box">
+            <input type="text" required />
+            <label>Business Category</label>
+          </div>
+        </div>
+        <div class="tab">
+          <h2>What is your business address?</h2>
+          <p>This helps customers find you.</p>
+          <div class="input-box">
+            <input type="text" required />
+            <label>Country</label>
+          </div>
+          <div class="input-box">
+            <input type="text" required />
+            <label>Street address</label>
+          </div>
+          <div class="input-box">
+            <input type="text" required />
+            <label>City</label>
+          </div>
+          <div class="input-box">
+            <input type="text" required />
+            <label>State</label>
+          </div>
+          <div class="input-box">
+            <input type="text" required />
+            <label>Postal code / Zip</label>
+          </div>
+        </div>
+        <div class="tab">
+          <h2>Stay updated by getting the lastest offers.</h2>
+          <div class="input-box">
+            <input type="email"  required/>
+            <label>Enter your business email</label>
+          </div>
+        </div>
+
+        <div class="btn-main">
+          <div class="btn">
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)">
+              Previous
+            </button>
+            <button type="button" id="nextBtn" onclick="nextPrev(1)">
+              Next <span><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="stepper">
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+          <span class="step"></span>
+        </div>
+      </form>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="js/script.js"></script>
+      <script>
+        //PAGE PRELOADER
+        $(document).ready(function () {
+          //Preloader
+          preloaderFadeOutTime = 500;
+
+          function hidePreloader() {
+            var preloader = $(".pre-loader");
+            preloader.fadeOut(preloaderFadeOutTime);
+          }
+          setInterval(hidePreloader, 1000);
+        });
+      </script>
+    </div>
+  </body>
+</html>

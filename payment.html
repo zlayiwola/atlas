@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATLAS | Pay Now</title>
+    <!-- FONTAWESOME CSS -->
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <!-- LOADING -->
+    <!-- <div class="pre-loader">
+        <div class="loader">ATLAS</div>
+      </div> -->
+  
+      <!-- NAVIGATION -->
+      <!-- <nav class="navigation">
+        <div class="container">
+          <a href="#" class="logo"><span>ATl</span>as</a>
+  
+          <ul id="links">
+            <li><a href="#" id="closebtn" onclick="closeNav()"><i class="fa fa-times" aria-hidden="true"></i>
+            </a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Business</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#" class="login">Login</a></li>
+            <li><a href="#" class="signup">Signup</a></li>
+          </ul>
+        </div>
+        <img src="img/menu.svg" alt="menu icon" id="menu" onclick="openNav()" />
+      </nav> -->
+      <!-- NAVIGATION ENDS HERE -->
+
+
+      <div class="payment">
+        <h2>Pay Now</h2>
+        <div class="payment-details">
+          <form action="">
+            <div class="input-box">
+              <select id="">
+                <option value="">Card Type</option>
+                <option value="Master">MasterCard</option>
+                <option value="">Verve</option>
+              </select>
+            </div>
+            <div class="input-box">
+              <input type="text" required>
+              <label for="">Card Holder Name</label>
+            </div>
+            <div class="input-box">
+              <input type="text" required>
+              <label for="">Card Number</label>
+            </div>
+            <div class="input-box">
+              <input type="text" required>
+              <label for="">Expiration Date</label>
+            </div>
+            <div class="input-box">
+              <input type="text" required>
+              <label for="">CVV</label>
+            </div>
+            <button type="submit">Pay Now</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="payment-footer">
+        <p>Copyright &copy; 2020 ATLAS Inc.</p>
+      </div>
+
+
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="js/script.js"></script>
+      <script>
+        //PAGE PRELOADER
+        $(document).ready(function () {
+          //Preloader
+          preloaderFadeOutTime = 500;
+
+          function hidePreloader() {
+            var preloader = $(".pre-loader");
+            preloader.fadeOut(preloaderFadeOutTime);
+          }
+          setInterval(hidePreloader, 1000);
+        });
+      </script>
+</body>
+</html>
