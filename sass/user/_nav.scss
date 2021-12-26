@@ -1,0 +1,130 @@
+// THE TOP NAV
+.nav {
+  width: 100%;
+  padding: 10px 30px;
+  background-color: $light-color;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  a.brand {
+    color: $dark-color;
+    font-size: 1.6rem;
+    span{
+        color: $primary-color;
+    }
+  }
+
+  .shopping-cart {
+    position: relative;
+
+    span {
+      font-size: 18px;
+    }
+    i.cart-num {
+      position: absolute;
+      left: 13px;
+      top: -5px;
+      width: 15px;
+      height: 15px;
+      font-weight: 700;
+      // padding: 8px;
+      padding:0;
+      border-radius: 50%;
+      font-size: 10px;
+      background-color: $primary-color;
+      text-align: center;
+      color: $light-color;
+    }
+  }
+  button.nav-toggle{
+      display: none;
+      padding: 0px 15px;
+      font-size: 28px;
+      border-radius: 5px;
+      outline: none;
+      border: 1px solid #aaaa;
+  }
+}
+
+//THE SIDE NAVIGATION
+
+.side-nav {
+  position: absolute;
+  margin: 30px 0 0 50px;
+  height: 78%;
+  width: 20%;
+  background-color: $light-color;
+  border-radius: 4px;
+
+
+  ul {
+    list-style: none;
+
+    &.main-links {
+      //   margin: 20px 0 0;
+
+      li {
+        position: relative;
+        font-size: 15px;
+        // margin: 0 0 28px 20px;
+        a {
+          color: $dark-color;
+          padding: 14px 10px;
+          display: block;
+          &:active {
+            background-color: $primary-color;
+            border-radius: 3px;
+          }
+          &:visited {
+            background-color: $primary-color;
+            border-radius: 3px;
+          }
+          &:hover {
+            background-color: $primary-color;
+            color: $light-color;
+          }
+
+          i {
+            padding: 0 15px 0 10px;
+          }
+        }
+      }
+    }
+    &.sub-links {
+      margin: 10px 0 0;
+      border-top: 1px solid #d1d1d1;
+      padding-top: 10px;
+
+      li {
+        font-size: 15px;
+
+        a {
+          color: $dark-color;
+          display: block;
+          padding: 10px 20px;
+
+          &:active {
+            background-color: $primary-color;
+          }
+          &:visited {
+            background-color: $primary-color;
+          }
+          &:hover {
+            background-color: $primary-color;
+            color: $light-color;
+          }
+        }
+      }
+    }
+  }
+  a.logout {
+    margin: 10px 0 0;
+    padding: 10px 0;
+    display: block;
+    border-top: 1px solid #d1d1d1;
+    text-align: center;
+    color: $primary-color;
+    //   background-color: red;
+  }
+}

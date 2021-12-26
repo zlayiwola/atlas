@@ -1,0 +1,98 @@
+.payment{
+    width: 50%;
+    box-shadow: $box-shadow;
+    margin: 5% auto;
+    padding: 20px;
+
+    h2{
+        font-size: 25px;
+        text-align: center;
+        color: $dark-color;
+        padding: 10px 0 0;
+    }
+
+    .payment-details{
+        // position: relative;
+        width: 80%;
+        margin: 30px auto;
+        // border: 1px solid red;
+
+        .input-box{
+            width: 100%;
+            position: relative;
+
+            input, select{
+                display: block;
+                height: 40px;
+                width: 100%;
+                position: relative;
+                margin: 0 0 15px;
+                background: none;
+                outline: none;
+                border: 1px solid #aaaaaa;
+                border-radius: 4px;
+                padding: 0 0 0 10px;
+                
+            }
+            select{
+                color: #b6b6b6;
+            }
+            input:focus{
+                border: 1px solid #426ee7;
+            }
+            label{
+                position: absolute;
+                color: #aaaaaa;
+                left: 11px;
+                top: 10px;
+                z-index: -1;
+                transition: all 400ms ease-out;
+
+            }
+            
+            input:focus ~ label, input:valid ~ label{
+                transform: translateY(-16px);
+                background-color: white;
+                color: #426ee7;
+                z-index: 1;
+                padding: 0 3px;
+                font-size: 12px;
+                transition: all 400ms ease-out;
+            }
+        }
+        button{
+            width: 100%;
+            padding: 12px 0;
+            border: none;
+            outline: none;
+            background-color: $primary-color;
+            color: #fff;
+            margin: 5px 0 40px;
+            border-radius: 3px;
+            font-size:17px;
+        }
+    }
+}
+
+.payment-footer{
+    width: 50%;
+    border-top: 2px solid #aaaaaa;
+    margin: 3% auto;
+    padding: 10px 0;
+
+    p{
+        color: #aaaaaa;
+    }
+}
+
+@media screen and (max-width: 972px){
+    .payment{
+        width: 90%;
+        margin: 7% auto;
+    }
+    
+    .payment-footer{
+        width: 90%;
+        margin: 20% auto;
+    }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+
+    <!-- FONT AWESOME CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="../css/user.css" />
+  </head>
+  <body>
+    <!-- THE TOP NAV -->
+    <nav class="nav">
+      <a href="#" class="brand"><span>ATL</span>AS</a>
+
+      <div class="shopping-cart">
+        <span><i class="fa fa-shopping-cart"></i> Cart</span>
+        <i class="cart-num">1</i>
+      </div>
+      <button class="nav-toggle"><i class="fa fa-bars"></i></button>
+    </nav>
+
+    <div class="cart-section">
+      <h1>Cart</h1>
+
+      <div class="main-wrapper">
+        <!-- the table starts here -->
+        <table>
+          <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Unit price</th>
+            <th>Subtotal</th>
+          </tr>
+          <tr>
+            <td>
+              <div class="img-box">
+                <img src="../img/orderimg.png" alt="" />
+              </div>
+              <p>Seller: Waslak Store</p>
+              <h4>Night hd Vision Glas for Driving yellow</h4>
+              <a href="#" class="actions"
+                ><i class="fa fa-heart"></i>Add to saved items</a
+              >
+              <a href="#" class="actions"><i class="fa fa-trash"></i>Remove</a>
+            </td>
+            <td>
+              <select name="qauntity" id="quantity">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </select>
+            </td>
+            <td id="unit">
+              2200
+            </td>
+            <td id="total">
+              5000
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="button">
+      <a href="#" class="continue">Continue Shopping</a>
+      <a href="#" class="checkout">Proceed to checkout</a>
+    </div>
+
+    <script src="../js/all.js"></script>
+    <script>
+      const newResult = document.getElementById("total");
+      var unitprice = document.getElementById("unit").innerText;
+      var quan = document.getElementById("quantity");
+
+      quan.addEventListener(
+        "change",
+        function () {
+          var result = Number(unitprice) * Number(quan.value);
+          newResult.innerHTML = result;
+        },
+        false
+      );
+    </script>
+  </body>
+</html>

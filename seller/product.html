@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlas | products</title>
+    <!-- FONTAWESOME ICONS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="../css/seller.css">
+</head>
+<body>
+
+    <!-- THE TOP NAVIGATION BAR -->
+    <nav class="nav">
+        <a href="#" class="menu-icon" id="menuicon"><i class="fa fa-bars"></i></a>
+
+        <div class="brand">
+            <a href="#"><span>ATL</span>AS </a>
+        </div>
+    </nav>
+
+
+    <!-- THE SIDE NAVIGATION MENU -->
+    <div class="side-nav " id="sidemenu">
+       <div class="biz-info">
+        <h1 class="biz-name">Atlas</h1>
+        <p class="biz-add">Ebute igbogbo rd, fakoyabi street, ikorodu <br>
+        Lagos <br>
+        ikorodu 100001 <br>
+        Ikorodu
+        </p>
+       </div>
+
+       <!-- THE NAV LINKS -->
+       <ul class="nav-links">
+           <li><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
+           <li><a href="#"><i class="fa fa-info-circle"></i>Info</a></li>
+           <li><a href="#"><i class="fa fa-comment-o"></i>Reviews</a></li>
+           <li><a href="#"><i class="fa fa-inbox"></i>Messaging</a></li>
+           <li><a href="photos.html"><i class="fa fa-image"></i>Photos</a></li>
+           <li><a href="product.html"><i class="fa fa-product-hunt"></i>Products</a></li>
+           <hr>
+           <li><a href="services.html"><i class="fa fa-wrench"></i>Services</a></li>
+           <li><a href="#"><i class="fa fa-book"></i>Create an ad</a></li>
+           <li><a href="#"><i class="fa fa-map-marker"></i>Add new location</a></li>
+           <hr>
+           <li><a href="#"><i class="fa fa-building"></i>Manage location</a></li>
+           <li><a href="#"><i class="fa fa-wrench"></i>Settings</a></li>
+           <li><a href="#"><i class="fa fa-wrench"></i>Support</a></li>
+       </ul>
+    </div>
+    <!-- ENDS HERE -->
+
+
+    <!-- THE PRODUCT FORM -->
+    <div class="product-form" id="wrapper">
+        <h1>Add a product category</h1>
+        <form action="" class="form">
+            <div class="input-box">
+                <input type="file" class="inputfile" id="fileinput" multiple>
+                <label for="input" class="file"><span class="name" id="filename"><i class="fa fa-upload"></i>Add a picture</span></label>
+            </div>
+            <div class="input-box">
+                <input type="text" name="pname" required>
+                <label>Product name</label>
+            </div>
+            <div class="input-box">
+                <input type="text" name="pcat" required>
+                <label>Product category</label>
+                <small>Examples: Dinning table, Headphones.</small>
+            </div>
+            <div class="input-box radio">
+                <input type="radio" name="fprice" id="radio-1"><span>Fixed price</span>
+                <input type="radio" name="fprice" id="radio-2"><span>Price</span>
+            </div>
+            <div class="input-box">
+                <input type="text" name="productprice" id="pprice" required>
+                <label for="pprice">Product price</label>
+            </div>
+            <div class="input-box">
+                <textarea name="productdesc" id="pro-desc" cols="30" rows="5" placeholder="Product Description"></textarea>
+                <small>Optional</small>
+            </div>
+
+            <button class="submit">Add product</button>
+        </form>
+    
+
+        <div class="main-wrapper" id="wrapper">
+            <div class="product-wrapper">
+                <div class="product-category">
+                    <h2>Toy</h2>
+                </div>
+                <div class="product-details">
+                    <img src="../img/orderimg.png" alt="" class="pro-img">
+                    <div class="product-content">
+                        <h4>Figet Spinner</h4>
+                        <p>&#x20a6 1,300</p>
+                        <small class="product-desc">it help to relax and reduce stress.</small>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <img src="../img/orderimg.png" alt="" class="pro-img">
+                    <div class="product-content">
+                        <h4>Figet Spinner</h4>
+                        <p>&#x20a6 1,300</p>
+                        <small class="product-desc">it help to relax and reduce stress.</small>
+                    </div>
+                </div>
+                <div class="product-btn">
+                    <a href="#" class="add-btn">Add Product</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    <script src="../js/seller.js" defer></script>
+</body>
+</html>

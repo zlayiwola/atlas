@@ -1,0 +1,131 @@
+//THE TOP NAV
+.nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 65px;
+  background-color: $light-color;
+  box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.171);
+  padding: 10px 30px;
+  z-index: 999;
+
+  a.menu-icon {
+    font-size: 25px;
+    display: inline-block;
+    margin: 0 20px 0 0;
+    color: lighten($color: $dark-color, $amount: 20);
+  }
+
+  .brand {
+    display: inline-block;
+
+    a {
+      font-size: 1.7rem;
+      color: lighten($color: $dark-color, $amount: 20);
+
+      span {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+// THE NAV ENDS HERE ====================================
+
+//THE SIDE NAV ========================
+.side-nav {
+  position: fixed;
+  // top: 50px;
+  width: 20%;
+  height: 90%;
+  border: 1px solid #ccc;
+  padding: 15px 0 0 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  transition: all 300ms ease-out;
+  z-index: 999;
+
+  @media (max-width: 768px) {
+    width: 0;
+    background-color: $light-color;
+    z-index: 99;
+  }
+  @media (max-width: 414px){
+    width: 0%;
+    background-color: $light-color;
+  }
+
+  &:hover {
+    overflow-y: scroll;
+  }
+  &.active {
+    width: 0;
+    overflow-x: hidden;
+
+    @media (max-width:768px){
+      width: 50%;
+    }
+
+    @media (max-width: 414px){
+      width: 70%;
+    }
+  }
+
+  .biz-info {
+    width: 100%;
+    display: inline-block;
+    padding: 0 0 0 20px;
+
+    h1 {
+      font-size: 1.2rem;
+      color: lighten($color: $dark-color, $amount: 20);
+      font-weight: 500;
+    }
+    p {
+      font-size: 0.8rem;
+      color: lighten($color: $dark-color, $amount: 20);
+    }
+  }
+
+  ul.nav-links {
+    list-style: none;
+    margin: 10px 0 0 0;
+
+    hr {
+      border: 1px solid #ccc;
+      // margin: 0 10px;
+      font-weight: 200;
+    }
+
+    li {
+      padding: 15px 0 15px 20px;
+      border-bottom-right-radius: 50px;
+      border-top-right-radius: 50px;
+
+      &:hover {
+        background-color: $primary-color;
+        color: $light-color;
+
+        a {
+          color: $light-color;
+        }
+      }
+      a {
+        font-size: 1.05rem;
+        color: lighten($color: $dark-color, $amount: 20);
+        display: block;
+
+        &:active{
+          background-color: $primary-color;
+        }
+        &:visited{
+          background-color: $primary-color;
+        }
+
+        i {
+          padding: 0 15px 0 0;
+        }
+      }
+    }
+  }
+}

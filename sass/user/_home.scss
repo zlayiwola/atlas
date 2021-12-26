@@ -1,0 +1,70 @@
+.account-overview{
+    width: 65%;
+    height: 70%;
+    border: 1px solid #aaaa;
+    border-radius: 4px;
+    margin: 30px 0 0 26%;
+    padding: 30px;
+    background-color: $light-color;
+    
+    h1{
+        font-size: 1.6rem;
+        color: $dark-color;
+        font-weight: 500;
+        margin: 0 0 30px;
+    }
+    
+    .account-wrapper{
+        position: relative;
+        margin: 10px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .card{
+            width: 45%;
+            border: 1px solid #aaaa;
+            border-radius: 3px;
+            align-self: flex-start;
+
+            &-header{
+                padding: 4px 12px;
+                border-bottom: 1px solid #aaaa;
+                overflow: auto;
+                h3{
+                    float: left;
+                    font-size: 1.1rem;
+                    font-weight: 500;
+                }
+                a{
+                    float: right;
+                    padding: 3px 0;
+                    color: $primary-color;
+                    opacity: .7;
+                }
+            }
+            &-content{
+                padding: 7px 12px 30px;
+                // border-bottom: 1px solid #aaaa;
+                p{
+                    font-size: .8rem;
+
+                    // &:first-child{
+                    //     font-weight: 600;
+                    // }
+                    
+                    &.address{
+                        padding: 10px 0 0;
+
+                    }
+                }
+            }
+            a.card-footer{
+                display: inline-block;
+                padding: 10px 12px;
+                font-size: .9rem;
+                color: $primary-color;
+            }
+        }
+    }
+}

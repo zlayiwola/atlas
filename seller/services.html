@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atlas | products</title>
+    <!-- FONTAWESOME ICONS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!-- CUSTOM CSS -->
+    <link rel="stylesheet" href="../css/seller.css" />
+</head>
+
+<body>
+    <!-- THE TOP NAVIGATION BAR -->
+    <nav class="nav">
+        <a href="#" class="menu-icon" id="menuicon"><i class="fa fa-bars"></i></a>
+
+        <div class="brand">
+            <a href="#"><span>ATL</span>AS </a>
+        </div>
+    </nav>
+
+    <!-- THE SIDE NAVIGATION MENU -->
+    <div class="side-nav" id="sidemenu">
+        <div class="biz-info">
+            <h1 class="biz-name">Atlas</h1>
+            <p class="biz-add">
+                Ebute igbogbo rd, fakoyabi street, ikorodu <br />
+                Lagos <br />
+                ikorodu 100001 <br />
+                Ikorodu
+            </p>
+        </div>
+
+        <!-- THE NAV LINKS -->
+        <ul class="nav-links">
+            <li>
+                <a href="index.html"><i class="fa fa-home"></i>Home</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-info-circle"></i>Info</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-comment-o"></i>Reviews</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-inbox"></i>Messaging</a>
+            </li>
+            <li>
+                <a href="photos.html"><i class="fa fa-image"></i>Photos</a>
+            </li>
+            <li>
+                <a href="product.html"><i class="fa fa-product-hunt"></i>Products</a>
+            </li>
+            <hr />
+            <li>
+                <a href="services.html"><i class="fa fa-wrench"></i>Services</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-book"></i>Create an ad</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-map-marker"></i>Add new location</a>
+            </li>
+            <hr />
+            <li>
+                <a href="#"><i class="fa fa-building"></i>Manage location</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-wrench"></i>Settings</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-wrench"></i>Support</a>
+            </li>
+        </ul>
+    </div>
+    <!-- ENDS HERE -->
+
+    <div class="service" id="service-modal">
+        <div class="service-modal">
+            <form action="" class="form">
+                <h4>Add a service</h4>
+                <input type="text" name="service" id="service">
+                <!-- <label for="service"><i class="fa fa-search"></i></label> -->
+                <button type="submit" class="sub-btn">Add service</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="all-services" id="wrapper">
+        <div class="service-card  active">
+            <h2 class="default">Ecommerce</h2>
+            <small class="active">Primary Category</small>
+        </div>
+        <div class="service-card ">
+            <h2 class="">Application Development</h2>
+            <small class="">Primary Category</small>
+        </div>
+        <div class="all-services-footer">
+            <a href="#" id="add"><i class="fa fa-plus"></i> Add another service</a>
+        </div>
+    </div>
+
+
+    <script src="../js/seller.js" defer></script>
+    <script>
+        var addBtn = document.getElementById('add');
+        var modal = document.getElementById('service-modal');
+        
+        window.addEventListener('click', function(e){
+            if(e.target == modal){
+                modal.style.display = "none"
+            }
+        });
+        
+        addBtn.addEventListener('click', function(e){
+            modal.style.display = "flex";
+        });
+
+        
+    </script>
+    </body>
+    </html>

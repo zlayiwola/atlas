@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+@import "colors";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  background-color: $light-color;
+  overflow-y: scroll;
+}
+
+a {
+  text-decoration: none;
+}
+
+.footer {
+  width: 50%;
+  margin: 0 0 0 23%;
+  display: flex;
+  align-items: flex-end;
+  align-self: flex-end;
+  background-color: red;
+
+  p{
+      align-self: flex-end;
+  }
+}
+// #wrapper{
+//     margin: 2% 0 0 23%;
+// }
+
+@import "seller/nav";
+@import "seller/index";
+@import "seller/product";
+@import "seller/photo";
+@import "seller/service";

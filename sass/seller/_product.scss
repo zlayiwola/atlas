@@ -1,0 +1,288 @@
+.product-form {
+  width: 70%;
+  position: relative;
+  margin: 2% 0 3% 23%;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 15px;
+  transition: all 300ms ease-out .02s;
+
+  @media (max-width:768px){
+    width: 90%;
+    margin: 7% auto;
+    padding: 0;
+    border: none;
+  }
+
+  &.closer{
+    margin-left: 10%;
+
+    @media (max-width: 768px){
+      margin-left: auto;
+    }
+  }
+
+  h1 {
+    font-size: 1.1rem;
+    color: $dark-color;
+    font-weight: 400;
+    
+    @media (max-width: 768px){
+      text-align: center;
+      font-weight: 500;
+      font-size: 1.2rem;
+      color: $dark-color;
+      color: lighten($color: $dark-color, $amount: 20);
+    }
+    
+  }
+  .form {
+    width: 90%;
+    margin: 10% auto 0;
+    // overflow: hidden;
+    // border: 1px solid red;
+
+    @media (max-width: 768px){
+      width: 100%;
+      margin: 7% auto 0;
+    }
+
+    .input-box {
+      width: 100%;
+      position: relative;
+      display: block;
+      margin-bottom: 15px;
+
+      &.radio{
+        input[type="radio"]{
+          margin: 0 8px 0 8px ;
+        }
+      }
+
+      input[type="text"]{
+        display: block;
+        position: relative;
+        height: 45px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 70%;
+        background: none;
+        padding: 0 0 0 20px;
+
+        @media (max-width: 768px){
+          width: 100%;
+        }
+      }
+
+      input[type="text"]:focus{
+        border: 2px solid lighten($color: $primary-color, $amount: 20);
+        transition: border 200ms ease-out;
+        box-shadow:  0 0 5px lighten($color: $primary-color, $amount: 30);
+      }
+      input[type="text"]:focus ~ label{
+        color: lighten($color: $primary-color, $amount: 20);
+      }
+
+      input[type="text"]:focus ~ label, input[type="text"]:valid ~ label{
+        background-color: #fff;
+        padding: 0 3px;
+        top: -12px;
+        left: 8px;
+        font-size: 14px;
+        transition: all 400ms ease-out;
+        z-index: 999;
+
+        @media (max-width: 768px){
+          font-size: 12px;
+          top: -10px;
+        }
+      }
+    
+
+      label{
+        position: absolute;
+        left: 20px;
+        top: 11px;
+        font-size: 16px;
+        color: lighten($color: $dark-color, $amount: 20);
+        z-index: -1;
+        transition: all 300ms ease-out;
+      }
+      small{
+        font-size: 12px;
+        color: lighten($color: $dark-color, $amount: 20);
+        padding: 0 0 0 10px;
+      }
+
+      textarea{
+        display: block;
+        position: relative;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        width: 70%;
+        background: none;
+        padding: 10px;
+        resize: none;
+
+        @media (max-width: 768px){
+          width: 100%;
+        }
+
+        &:focus{
+          border: 2px solid lighten($color: $primary-color, $amount: 20);
+        transition: border 100ms ease-out;
+        box-shadow:  0 0 5px lighten($color: $primary-color, $amount: 30);
+        }
+      }
+
+
+      .file{
+        width: 70%;
+        display:block;
+        text-align: center;
+        margin: 0;
+        transform: translateY(-20px) translateX(-18px);
+        padding: 10px 0;
+        background-color: $primary-color;
+        color: #150c0c;
+        font-weight: 500;
+        border-radius: 4px;
+        z-index: -1;
+        overflow: hidden;
+
+        @media (max-width: 768px){
+          width: 100%;
+          transform: translateY(-20px) translateX(-20px);
+        }
+        
+        span{
+          display: block;
+
+          i{
+            padding: 0 10px 0 0;
+          }
+        }
+      }
+
+      .inputfile {
+        width: 70%;
+        margin: 0;
+        display: block;
+        color: transparent;
+        visibility: visible;
+        // border: 1px solid red;
+        padding: 10px 0;
+        z-index: 99;
+        opacity: 0;
+        @media (max-width: 768px){
+          width: 100%;
+        }
+
+        &:hover{
+          cursor: pointer;
+        }
+        &::-webkit-file-upload-button {
+          visibility: hidden;
+        }
+
+
+      }
+    }
+    .submit{
+      padding: 8px 35px;
+      font-weight: 500;
+      font-size: 17px;
+      color: #150c0c;
+      background-color: $primary-color;
+      outline: none;
+      border-radius: 4px;
+      border: none;
+    }
+  }
+}
+
+.main-wrapper {
+  width: 92%;
+  position: relative;
+  margin: 20% auto 0;
+  display: block;
+  // border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  transition: all 300ms ease-out 0.02s;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 0;
+    margin: 30% 0 0;
+  }
+
+  &.closer {
+    margin-left: 10%;
+
+    @media (max-width: 768px){
+      margin-left: 0;
+    }
+  }
+
+  .product-wrapper {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+    .product-category {
+      padding: 10px 18px;
+      border-bottom: 1px solid #ccc;
+
+      h2 {
+        font: 1.2rem;
+        font-weight: 400;
+      }
+    }
+    .product-btn {
+      padding: 10px 18px;
+      border-top: 1px solid #ccc;
+
+      a.add-btn {
+        display: inline-block;
+        padding: 8px 15px;
+        background-color: $primary-color;
+        color: #150c0c;
+        font-weight: 500;
+        font-size: 14px;
+        border-radius: 3px;
+      }
+    }
+    .product-details {
+      padding: 10px 18px;
+      overflow: auto;
+
+      img {
+        width: 100px;
+        height: 100px;
+        float: left;
+        overflow: auto;
+        margin: 0 20px 0 0;
+      }
+      .product-content {
+        margin: 0 0 0 20px;
+
+        h4 {
+          font-weight: 500;
+          color: $dark-color;
+        }
+        p {
+          color: lighten($color: #000000, $amount: 20);
+        }
+        small.product-desc {
+          display: inline-block;
+          margin: 15px 0 0 0;
+          color: lighten($color: #000000, $amount: 20);
+        }
+      }
+    }
+  }
+}

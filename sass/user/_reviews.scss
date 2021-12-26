@@ -1,0 +1,180 @@
+.main-wrapper{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 30px 0 0 0%;
+
+
+    .review-section {
+        position: relative;
+        width: 68%;
+        height: 70%;
+        border-radius: 4px;
+        // margin: 30px 0 0 0%;
+        // padding: 20px 30px;
+        background-color: $light-color;
+      
+        .review-header {
+          width: 100%;
+          border-bottom: 1px solid #aaa;
+          overflow: auto;
+          padding: 10px 10px;
+      
+          h1 {
+            font-size: 1.4rem;
+            float: left;
+            color: $dark-color;
+            font-weight: 500;
+          }
+          a {
+            float: right;
+            padding: 5px 0 0 0;
+            color: $primary-color;
+            i {
+              padding: 0 5px;
+            }
+          }
+        }
+        .review-main-section {
+          clear: both;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+      
+          .ratings {
+            // border: 1px solid red;
+            width: 25%;
+            padding: 5px 10px;
+      
+            h3 {
+              font-size: 1.1rem;
+              font-weight: 500;
+            }
+            .star {
+              width: 100%;
+              margin: 5px auto;
+              padding: 10px 0;
+              background-color: rgb(195, 195, 195);
+              opacity: 0.8;
+              text-align: center;
+              border-radius: 3px;
+      
+              h1,
+              span {
+                color: $primary-color;
+                font-weight: 500;
+              }
+              span {
+                i {
+                  padding: 0 3px;
+                }
+              }
+              p {
+                font-size: 14px;
+              }
+            }
+            .rating-list {
+                marg
+              .list:first-child {
+                margin: 10px 0 0 0;
+              }
+              .list {
+                width: 100%;
+                margin: 8px auto;
+                // border: 1px solid red;
+                span {
+                  padding: 0 2px;
+                  i {
+                    padding: 0 2px 0 0;
+                  }
+                }
+                progress {
+                  width: 65%;
+                  color: $primary-color;
+                }
+              }
+            }
+            
+          }
+          .rating-reviews{
+              position: relative;
+              width: 75%;
+              height: 100%;
+            //   border: 1px solid red;
+              align-self: flex-start;
+              padding: 5px 10px;
+              
+              
+              h4{
+                  font-size: 1.2rem;
+                  font-weight: 500;
+              }
+              .no-review{
+                  width: 100%;
+                  height: 100%;
+                  text-align: center;
+      
+                  span{
+                      font-size: 7rem;
+                      opacity: .5;
+                  }
+              }
+          }
+        }
+      }
+
+      .other-section{
+          width: 20%;
+          background-color: $light-color;
+          padding: 0 0 0;
+          align-self: flex-start;
+          border-radius: 4px;
+
+          ul{
+              list-style: none;
+              li{
+                  padding: 15px 0 15px 20px;
+                  border-bottom: 1px solid #aaa;
+                  
+                  &:hover{
+                      background-color: $primary-color;
+                      a{
+                          color: white;
+                      }
+                  }
+                  a{
+                      color: $dark-color;
+                      i{
+                          padding: 0 5px;
+                      }
+                  }
+              }
+          }
+      }
+   .other-product{
+        margin: 30px 0 0;
+        .img-box{
+            width: 70px;
+            height: 70px;
+            float: left;
+            padding: 0 10px;
+            img{
+                width: 100%;
+            }
+        }
+        a.btn{
+            display:block;
+            clear: both;
+            margin: 15px 0 0;
+            padding: 5px 0;
+            background-color: $primary-color;
+            color:white;
+            text-align: center;
+            i{
+                padding: 0 5px;
+            }
+        }
+   }   
+}

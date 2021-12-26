@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas | products</title>
+  <!-- FONTAWESOME ICONS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <!-- CUSTOM CSS -->
+  <link rel="stylesheet" href="../css/seller.css" />
+</head>
+
+<body>
+  <!-- THE TOP NAVIGATION BAR -->
+  <nav class="nav">
+    <a href="#" class="menu-icon" id="menuicon"><i class="fa fa-bars"></i></a>
+
+    <div class="brand">
+      <a href="#"><span>ATL</span>AS </a>
+    </div>
+  </nav>
+
+  <!-- THE SIDE NAVIGATION MENU -->
+  <div class="side-nav" id="sidemenu">
+    <div class="biz-info">
+      <h1 class="biz-name">Atlas</h1>
+      <p class="biz-add">
+        Ebute igbogbo rd, fakoyabi street, ikorodu <br />
+        Lagos <br />
+        ikorodu 100001 <br />
+        Ikorodu
+      </p>
+    </div>
+
+    <!-- THE NAV LINKS -->
+    <ul class="nav-links">
+      <li>
+        <a href="index.html"><i class="fa fa-home"></i>Home</a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-info-circle"></i>Info</a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-comment-o"></i>Reviews</a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-inbox"></i>Messaging</a>
+      </li>
+      <li>
+        <a href="photos.html"><i class="fa fa-image"></i>Photos</a>
+      </li>
+      <li>
+        <a href="product.html"><i class="fa fa-product-hunt"></i>Products</a>
+      </li>
+      <hr />
+      <li>
+        <a href="services.html"><i class="fa fa-wrench"></i>Services</a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-book"></i>Create an ad</a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-map-marker"></i>Add new location</a>
+      </li>
+      <hr />
+      <li>
+        <a href="#"><i class="fa fa-building"></i>Manage location</a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-wrench"></i>Settings</a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-wrench"></i>Support</a>
+      </li>
+    </ul>
+  </div>
+  <!-- ENDS HERE -->
+
+  <!-- THE PHOTO SECTION STARTS HERE -->
+
+  <div class="container" id="wrapper">
+    <h3>
+      Manage your photos here effectively for both your brand and products.
+    </h3>
+
+    <div class="photo-wrapper">
+      <div class="photo logo">
+        <img src="../img/offi.png" alt="logo image" />
+        <div class="photo-content">
+          <h1>Logo</h1>
+          <h5>
+            Your logo helps identify your brand and when you reply reviews it
+            show to signify that you are the one.
+          </h5>
+        </div>
+        <div class="form-box">
+          <form action="" class="form-1" enctype='multipart/form-data'>
+            <input type="file" name="logo" id="logo" />
+            <label for="fileinput">Choose photo</label>
+          </form>
+        </div>
+      </div>
+      <div class="photo cover">
+        <img src="../img/offi.png" alt="cover image" />
+        <div class="photo-content">
+          <h1>Cover</h1>
+          <h5>
+            Your cover photo shows your personality and how you are percieved. It is your preferred photo
+            to be shown on the map.
+          </h5>
+        </div>
+        <div class="form-box">
+          <form action="" class="form-2"  enctype='multipart/form-data'>
+            <input type="file" name="logo" id="cover" />
+            <label for="fileinput">Choose photo</label>
+          </form>
+        </div>
+      </div>
+      <div class="photo logo">
+        <img src="../img/offi.png" alt="" />
+        <div class="photo-content">
+          <h1>Video</h1>
+          <h5>
+            Do you have a video for your customers to explain your brand better, upload it herea and it will be show on the map when customres search.
+          </h5>
+        </div>
+        <div class="form-box">
+          <form action=" " class="form-3"  enctype='multipart/form-data'>
+            <input type="file" name="logo" id="video" />
+            <label for="fileinput">Choose photo</label>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/seller.js" defer></script>
+  <script>
+    var logo = document.getElementById("logo");
+    var cover = document.getElementById("cover");
+    var video = document.getElementById("video");
+    var form1 = document.querySelector(".form-1");
+    var form2 = document.querySelector(".form-2");
+    var form3 = document.querySelector(".form-3");
+    console.log(form1);
+    console.log(logo);
+
+    logo.addEventListener('change', function(){
+      form1.submit();
+    }, false);
+    cover.addEventListener('change', function(){
+      form2.submit();
+    }, false);
+    video.addEventListener('change', function(){
+      form3.submit();
+    }, false);
+  </script>
+</body>
+
+</html>

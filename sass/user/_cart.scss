@@ -1,0 +1,90 @@
+.cart-section{
+    width: 80%;
+    border-radius: 4px;
+    margin: 30px auto 0;
+    padding: 30px;
+    background-color: $light-color;
+
+    h1 {
+        font-size: 1.8rem;
+        color: $dark-color;
+        font-weight: 500;
+        margin: 0 0 30px;
+      }
+
+      .main-wrapper{
+          width: 100%;
+
+          table{
+              width: 100%;
+              border-collapse: collapse;
+              th{
+                  text-align: left;
+                  font-weight: 400;
+                  color: #929292;
+              }
+              td{
+                  border: 1px solid #aaaa;
+                  padding: 5px 5px;
+                  margin: 10px 0;
+
+                  .img-box{
+                      width: 80px;
+                      height: 80px;
+                      float: left;
+                  }
+                  p{
+                      font-size: 14px;
+                      color: #929292;
+                  }
+                  h4{
+                      font-size: 18px;
+                      font-weight: 500;
+                      color:$dark-color;
+                  }
+                  a.action{
+                    //   clear: both;
+                      display: inline-block;
+                      margin: 20px 25px 0 0;
+                  }
+                  select{
+                      display: block;
+                      width: 50%;
+                      margin: 0 auto;
+                      text-align: center;
+                      border: none;
+                      border-bottom: 1px solid #aaaa;
+                  }
+              }
+          }
+    }
+}
+
+.button{
+    width: 80%;
+    border-radius: 4px;
+    margin: 30px auto 0;
+    padding: 20px;
+    background-color: $light-color;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    a{
+        
+        padding: 10px 35px;
+        margin: 0 10px 0;
+        border-radius: 4px;
+        text-align: right;
+
+        &.continue{
+            background-color: #626262;
+            color: $light-color;
+        }
+        &.checkout{
+            background-color: $primary-color;
+            color: $light-color
+        }
+    }
+    
+}
